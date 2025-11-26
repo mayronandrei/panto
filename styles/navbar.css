@@ -119,3 +119,184 @@ input::placeholder{
   font-size: 17px;
   font-weight: 100;
 }
+
+header{
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#hero{
+  background-image: url("../img/hero.png");
+  background-size: 100% auto; 
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  height: auto; 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Opcional: Para garantir que a imagem de fundo cubra a tela em dispositivos móveis. */
+@media (max-width: 768px) {
+  #hero {
+    background-size: cover; 
+    background-position: top center;
+  }
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilos padrão (Mobile-First) */
+#navbar{
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Coluna para mobile */
+  align-items: center;
+  justify-content: center;
+  padding:  20px 20px;
+  gap: 20px; /* Espaço entre logo, lista e ícone */
+}
+
+#navlogo{
+  color: #FFFFFF;
+}
+
+#nav_list{
+  display: flex;
+  flex-direction: column; /* Coluna para mobile */
+  list-style: none;
+  gap: 15px; /* Redução do gap */
+  align-items: center;
+}
+
+#nav_list a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+#shop_icon{
+  color: #FFFFFF;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#number_icon{
+  /* Ajuste a posição para o novo layout */
+  background-color: #E58411;
+  border-radius: 25px;
+  display: inline-block;
+  padding: 1px 2px;
+  font-size: 14px;
+  position: absolute;
+  top: -5px; 
+  right: -10px; 
+}
+
+#content_text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#content_text h1{
+  font-size: 2.5rem; /* Redução para mobile */
+  font-weight: bold;
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+}
+
+#content_text h2{
+  font-size: 1.2rem; /* Redução para mobile */
+  font-weight: 100;
+  color: #FFFFFF;
+  padding: 10px;
+  text-align: center;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 90%; /* Largura flexível */
+  max-width: 350px; /* Limite de largura para não ficar muito grande */
+  margin-top: 30px;
+}
+
+.input-wrapper i {
+  /* Ajustar o posicionamento do ícone de pesquisa */
+  position: absolute;
+  right: 5px; /* Usar 'right' em vez de 'left' com pixel fixo */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #E58411;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 12px 12px;
+  left: unset; /* Remover o left fixo original */
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 20px 60px 20px 20px; /* Ajustar padding para ícone */
+  border: 1px solid #ffffff;
+  border-radius: 35px;
+  outline: none;
+  background: linear-gradient(to right, #ffffff34, #2b2a2a34);
+}
+
+input::placeholder{
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+/* Breakpoint para Tablet/Desktop (min-width: 768px) */
+@media (min-width: 768px) {
+  #navbar{
+    flex-direction: row; /* Volta para linha no desktop */
+    padding:  30px 50px;
+  }
+
+  #nav_list{
+    flex-direction: row; /* Volta para linha no desktop */
+    gap: 48px;
+  }
+  
+  #number_icon{
+    top: -1px;
+    right: -78px; /* Volta para a posição original */
+  }
+
+  #content_text h1{
+    font-size: 4rem; /* Volta ao tamanho original */
+  }
+
+  #content_text h2{
+    font-size: 1.5rem; /* Volta ao tamanho original */
+  }
+
+  .input-wrapper {
+    width: 300px; /* Volta ao tamanho original */
+    margin-top: 40px;
+  }
+
+  .input-wrapper i {
+    left: 250px; /* Volta à posição original */
+    right: unset;
+    padding: 12px 12px;
+  }
+
+  .input-wrapper input {
+    padding: 20px 12px 20px 35px; /* Volta ao padding original */
+  }
+}

@@ -53,3 +53,117 @@
     gap: 10px;
     padding: 0px 40px;
 }
+
+/* Estilos padrão (Mobile-First) */
+#footer_container {
+    display: flex;
+    flex-direction: column; /* Empilha em mobile */
+    background-color: #f1f1f1;
+    border-top: 1px solid #ccc;
+    padding: 30px 20px; /* Reduz padding */
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#footer_container h2 {
+    font-size: 20px; /* Reduz tamanho da fonte */
+    color: #1E1E1E;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#footer_container p {
+    font-size: 14px; /* Reduz tamanho da fonte */
+    color: #555;
+    line-height: 1.4;
+    max-width: 90%; /* Largura flexível */
+    letter-spacing: 1px; /* Reduz letter-spacing */
+    text-align: center;
+}
+
+#footer_text {
+    padding: 10px 20px; /* Reduz padding */
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+}
+
+#footer_links {
+    display: flex;
+    flex-direction: column; /* Empilha links em mobile */
+    gap: 40px;
+    align-items: center;
+}
+#footer_links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+}
+
+#footer_links h3 {
+    margin-bottom: 5px;
+    color: #F6973F;
+    font-size: 15px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0px 20px;
+    align-items: center; /* Centraliza a lista de links */
+}
+
+
+/* Breakpoint para Tablet/Desktop (min-width: 768px) */
+@media (min-width: 768px) {
+  #footer_container {
+      flex-direction: row; /* Volta para linha no desktop */
+      padding: 50px 20px;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: unset;
+  }
+
+  #footer_container h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-align: left;
+  }
+
+  #footer_container p {
+      font-size: 16px;
+      line-height: 1.5;
+      max-width: 300px;
+      letter-spacing: 3px;
+      text-align: left;
+  }
+
+  #footer_text {
+      padding: 30px 60px 0px 80px;
+      font-size: 14px;
+      text-align: left;
+  }
+
+  #footer_links {
+      flex-direction: row; /* Volta para linha no desktop */
+      gap: 80px;
+      align-items: flex-start;
+  }
+  #footer_links a {
+      font-size: 17px;
+  }
+
+  #footer_links h3 {
+      margin-bottom: 10px;
+      font-size: 17px;
+  }
+
+  .links {
+      gap: 10px;
+      padding: 0px 40px;
+      align-items: flex-start;
+  }
+}

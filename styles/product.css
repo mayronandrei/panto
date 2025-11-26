@@ -153,3 +153,421 @@
     top: 25%;
     transform: translateY(-50%);
 }
+
+/* Estilos padrão (Mobile-First) */
+#product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F7F7F7;
+  padding: 40px 10px; /* Reduz padding */
+}
+
+#product h2{
+  font-size: 2.5rem; /* Reduz tamanho da fonte */
+  color: #1E1E1E;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#products{
+  display: flex;
+  flex-direction: column; /* Coluna em mobile para economizar espaço */
+  background-color: #EEEEEE;
+  border-radius: 40px;
+  padding: 10px;
+  gap: 10px; /* Reduz gap */
+  align-items: center;
+  width: 90%; /* Largura flexível */
+  max-width: 300px;
+}
+.produtc-item-active{
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#products a{
+  display: flex;
+  flex-direction: row;
+  text-decoration:  none;
+  color: #1E1E1E;  
+  font-size: 16px; /* Reduz tamanho da fonte */
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 30px;
+}
+
+
+
+#cards{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Alinhar ao topo */
+  justify-content: flex-start; /* Alinhar à esquerda para simular slide */
+  background-color: #F7F7F7;
+  padding-bottom: 150px; /* Reduz padding */
+  gap: 20px; /* Reduz gap */
+  position: relative;
+  overflow-x: scroll; /* Habilita o scroll horizontal */
+  width: 100%; /* Largura total */
+  scroll-snap-type: x mandatory; /* Opcional: Para um snap mais suave no scroll */
+}
+
+#cards_container{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px 20px; /* Ajusta padding */
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap; /* Impede a quebra de linha dos cards */
+}
+
+.card{
+  min-width: 250px; /* Largura mínima para o card */
+  height: auto;
+  scroll-snap-align: start; /* Opcional: Alinha o card ao início na rolagem */
+}
+
+
+#card_description .stars i{
+  color: #FFB800;
+  margin-right: 5px;
+}
+
+#card_description h3{
+  font-size: 18px;
+  color: #1E1E1E;
+  font-weight: 600;
+}
+
+#card_description{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 0px  0px 20px 20px;
+}
+
+
+.card img{
+  width: 100%;
+  height: auto;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.price{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price p{
+  font-size: 20px;
+  color: #1E1E1E;
+  font-weight: 700;
+}
+
+.price button{
+  width: 35px; /* Reduz o tamanho do botão */
+  height: 35px;
+  background-color: #0D1B39;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.price button i{
+  color: #fff;
+}
+
+/* Esconder as setas do slider em telas menores, pois o scroll horizontal é usado */
+.slider-arrow {
+    display: none; 
+}
+
+
+/* Breakpoint para Tablet/Desktop (min-width: 768px) */
+@media (min-width: 768px) {
+  #product{
+    padding: 60px 30px;
+  }
+  
+  #product h2{
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+
+  #products{
+    flex-direction: row; /* Volta para linha no desktop */
+    padding: 15px;
+    gap: 25px;
+    width: auto;
+    max-width: none;
+  }
+  
+  #products a{
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+  
+  #cards{
+    overflow-x: hidden; /* Desabilita scroll horizontal */
+    justify-content: center;
+    padding-bottom: 300px;
+    gap: 35px;
+    width: auto;
+    
+  }
+
+  #cards_container{
+    gap: 42px;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Volta para wrap se necessário, embora não precise para o slider */
+  }
+
+  .card{
+    width: 280px; /* Volta para largura original */
+    min-width: unset;
+    height: 430px; /* Volta para altura original */
+  }
+  
+  .price p{
+    font-size: 24px;
+  }
+
+  .price button{
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Mostrar as setas do slider no desktop */
+  .slider-arrow {
+      display: flex; 
+  }
+
+  #prev_button {
+    
+    left: 280px; 
+    top: 25%;
+    transform: translateY(-50%);
+  }
+
+  #next_button {
+    
+    left: 1540px; 
+    top: 25%;
+    transform: translateY(-50%);
+  }
+}/* Estilos padrão (Mobile-First) */
+#product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F7F7F7;
+  padding: 40px 10px; /* Reduz padding */
+}
+
+#product h2{
+  font-size: 2.5rem; /* Reduz tamanho da fonte */
+  color: #1E1E1E;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#products{
+  display: flex;
+  flex-direction: column; /* Coluna em mobile para economizar espaço */
+  background-color: #EEEEEE;
+  border-radius: 40px;
+  padding: 10px;
+  gap: 10px; /* Reduz gap */
+  align-items: center;
+  width: 90%; /* Largura flexível */
+  max-width: 300px;
+}
+.produtc-item-active{
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#products a{
+  display: flex;
+  flex-direction: row;
+  text-decoration:  none;
+  color: #1E1E1E;  
+  font-size: 16px; /* Reduz tamanho da fonte */
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 30px;
+}
+
+
+
+#cards{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Alinhar ao topo */
+  justify-content: flex-start; /* Alinhar à esquerda para simular slide */
+  background-color: #F7F7F7;
+  padding-bottom: 150px; /* Reduz padding */
+  gap: 20px; /* Reduz gap */
+  position: relative;
+  overflow-x: scroll; /* Habilita o scroll horizontal */
+  width: 100%; /* Largura total */
+  scroll-snap-type: x mandatory; /* Opcional: Para um snap mais suave no scroll */
+}
+
+#cards_container{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px 20px; /* Ajusta padding */
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap; /* Impede a quebra de linha dos cards */
+}
+
+.card{
+  min-width: 250px; /* Largura mínima para o card */
+  height: auto;
+  scroll-snap-align: start; /* Opcional: Alinha o card ao início na rolagem */
+}
+
+
+#card_description .stars i{
+  color: #FFB800;
+  margin-right: 5px;
+}
+
+#card_description h3{
+  font-size: 18px;
+  color: #1E1E1E;
+  font-weight: 600;
+}
+
+#card_description{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 0px  0px 20px 20px;
+}
+
+
+.card img{
+  width: 100%;
+  height: auto;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.price{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price p{
+  font-size: 20px;
+  color: #1E1E1E;
+  font-weight: 700;
+}
+
+.price button{
+  width: 35px; /* Reduz o tamanho do botão */
+  height: 35px;
+  background-color: #0D1B39;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.price button i{
+  color: #fff;
+}
+
+/* Esconder as setas do slider em telas menores, pois o scroll horizontal é usado */
+.slider-arrow {
+    display: none; 
+}
+
+
+/* Breakpoint para Tablet/Desktop (min-width: 768px) */
+@media (min-width: 768px) {
+  #product{
+    padding: 60px 30px;
+  }
+  
+  #product h2{
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+
+  #products{
+    flex-direction: row; /* Volta para linha no desktop */
+    padding: 15px;
+    gap: 25px;
+    width: auto;
+    max-width: none;
+  }
+  
+  #products a{
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+  
+  #cards{
+    overflow-x: hidden; /* Desabilita scroll horizontal */
+    justify-content: center;
+    padding-bottom: 300px;
+    gap: 35px;
+    width: auto;
+    
+  }
+
+  #cards_container{
+    gap: 42px;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Volta para wrap se necessário, embora não precise para o slider */
+  }
+
+  .card{
+    width: 280px; /* Volta para largura original */
+    min-width: unset;
+    height: 430px; /* Volta para altura original */
+  }
+  
+  .price p{
+    font-size: 24px;
+  }
+
+  .price button{
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Mostrar as setas do slider no desktop */
+  .slider-arrow {
+      display: flex; 
+  }
+
+  #prev_button {
+    
+    left: 280px; 
+    top: 25%;
+    transform: translateY(-50%);
+  }
+
+  #next_button {
+    
+    left: 1540px; 
+    top: 25%;
+    transform: translateY(-50%);
+  }
+}
